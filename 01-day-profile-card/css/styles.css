@@ -1,0 +1,156 @@
+/* -----------------
+Tabla de contenidos:
+--------------------
+1. Fuente ......................... 12
+2. Variables ...................... 16
+3. Estilos generales .............. 27
+4. Créditos ....................... 37
+-------------------- */
+
+
+/* ----- Fuente ----- */
+@import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
+
+
+/* ----- Variables ----- */
+* {
+	--primary-font-family: 'Montserrat', sans-serif;
+	--body-bg-color: #212020;
+	--card-bg-color: #242323;
+	--text-color: #c2c2c2;
+	--fb-bg-color: #456da4;
+	--li-bg-color: #0984c6;
+	--ig-bg-color: #006184;
+	--lh-text: 22px;
+}
+
+
+/* ----------------------------- */
+/* ----- Estilos generales ----- */
+/* ----------------------------- */
+body {
+    font-family: var(--primary-font-family);
+    background-color: var(--body-bg-color);
+    color: var(--text-color);
+    line-height: var(--lh-text);
+    min-height: 100vh; /* Cambiado a min-height para evitar desbordamientos */
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* Estilos Contenedor */
+.contenedor-principal {
+    width: 80%; /* Cambiado a un valor relativo */
+    max-width: 23rem; /* Máximo ancho del contenedor */
+    height: auto; /* Cambiado a auto para que se ajuste al contenido */
+    background-color: var(--card-bg-color);
+    border-radius: 15px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1rem;
+	transition: all 0.3s ease-in-out;
+}
+.contenedor-principal:hover {
+	-webkit-box-shadow: 7px 6px 0px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: 7px 6px 0px 0px rgba(0,0,0,0.75);
+	box-shadow: 7px 6px 0px 0px rgba(0,0,0,0.75);
+}
+
+/* Estilos Info */
+.contendor-info {
+    margin-top: 1.8rem;
+    margin-bottom: auto;
+    padding: 1rem;
+}
+
+/* Estilos Titulo */
+.titulo {
+    font-size: 1.5rem;
+    font-weight: 600;
+	transition: all 0.3s ease;
+}
+.titulo:hover {
+	color: white;
+	cursor: pointer;
+}
+
+/* Estilos para el h2 */
+.subtitulo {
+    font-size: 0.9rem;
+    font-weight: 400;
+    background-color: var(--body-bg-color);
+    padding: 0.5rem;
+    margin-top: -0.5rem;
+    border-radius: 1rem;
+	transition: all 0.3s ease;
+}
+.subtitulo:hover {
+	background-color: white;
+	color: black;
+	cursor: pointer;
+}
+
+/* Estilos Parrafo */
+.parrafo {
+    font-size: 0.8rem;
+    padding-top: 1rem;
+    text-align: center;
+}
+
+/* Estilos IMG */
+.img {
+    width: 5.5rem;
+	height: 5rem;
+    border-radius: 50%;
+    margin: 2rem;
+	transition: all 0.3s ease-in-out;
+}
+.img:hover {
+	transform: scale(1.5) rotate(12deg);
+	cursor: pointer;
+}
+
+/* Redes Sociales */
+.contenedor-logos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* Cambiado a un diseño más flexible */
+    gap: 10px; /* Espacio entre elementos */
+    place-items: center;
+    background-color: rgba(29, 28, 28, 0.877);
+    width: 80%; /* Cambiado a un valor relativo */
+    max-width: 25.6rem; /* Máximo ancho del contenedor */
+    border-radius: 1rem;
+    margin: -0.6rem;
+	transition: all 0.3s ease-in-out;
+}
+.contenedor-logos:hover {
+	-webkit-box-shadow: 7px 6px 0px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: 7px 6px 0px 0px rgba(0,0,0,0.75);
+	box-shadow: 7px 6px 0px 0px rgba(0,0,0,0.75);
+}
+
+.logo {
+	transition: all 0.3s ease;
+}
+.logo:hover {
+	transform: rotate(360deg) scale(1.9);
+	cursor: pointer;
+}
+
+.footer{
+	text-align: center;
+	padding: 2rem;
+}
+.footer-p {
+	margin: -1rem;
+}
+
+/* ------------------------
+Diseño: UIDesign Daily🎨
+Desarrollo: Frontend Club🔥
+--------------------------- */
