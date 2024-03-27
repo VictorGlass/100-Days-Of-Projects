@@ -1,0 +1,153 @@
+/* ----- Fuente ----- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+/* ----- Variables ----- */
+:root {
+	--primary-font-family: 'Poppins', sans-serif;
+	--body-bg-color: #EEF2F9;
+	--btn-bg-color: #4788E9;
+	--text-color: #191847;
+	--white-color: #FFFFFF;
+	--black-color: #000000;
+	--font-size: 16px;
+	--lh-text: 1.5;
+}
+
+/* ----------------------------- */
+/* ----- Estilos generales ----- */
+/* ----------------------------- */
+body {
+	font-family: var(--primary-font-family);
+	background-color: var(--body-bg-color);
+	color: var(--text-color);
+	font-size: var(--font-size);
+	line-height: var(--lh-text);
+	margin: 0;
+}
+
+.contenedor {
+	background-color: var(--white-color);
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	gap: 20px;
+	max-width: 64%;
+	max-height: 66%;
+	padding: 20px;
+	margin: 5rem auto;
+	border-radius: 0.9rem;
+	transition: all 0.3s ease;
+}
+.contenedor:hover {
+	-webkit-box-shadow: 4px 4px 0px 0px rgba(0,0,0,0.28);
+	-moz-box-shadow: 4px 4px 0px 0px rgba(0,0,0,0.28);
+	box-shadow: 4px 4px 0px 0px rgba(0,0,0,0.28);
+
+}
+
+.contenedor-imagen {
+	display: grid;
+	justify-self: center;
+	margin-top: 8rem;
+	transform-style: preserve-3d;
+	transition: transform 0.5s;
+	filter: blur(2px);
+}
+.contenedor-imagen:hover {
+	filter: blur(0);
+	transform: scale(1.1);
+	cursor: pointer;
+
+}
+
+.c-parrafo {
+	background-color: var(--text-color);
+	color: var(--white-color);
+	padding: 0.3rem;
+	width: 7rem;
+	height: 1.5rem;
+	border-radius: 1rem;
+	font-family: var(--primary-font-family);
+	font-size: var(--font-size);
+	line-height: var(--lh-text);
+	transition: all 0.3s ease-in-out;
+	text-align: center;
+}
+
+.c-parrafo:hover {
+	background-color: #165580;
+	transform: scale(1.2);
+	cursor: pointer;
+}
+
+.c-parrafo2 {
+	text-decoration: line-through;
+}
+
+.c-descripcion {
+	color: #58647d;
+	text-align: center;
+	padding-bottom: 1rem;
+}
+
+.boton-agregar {
+	color: var(--white-color);
+	background-color: var(--btn-bg-color);
+	border: none;
+	width: 100%;
+	height: 3.2rem;
+	border-radius: 0.5rem;
+	transition: all 0.4s ease-in-out;
+}
+
+.boton-agregar:hover {
+	cursor: pointer;
+	box-shadow: 0px 7px 3px 1px #15509c;
+}
+
+.color-list {
+	list-style-type: none;
+	padding: 1rem;
+}
+
+.color-list li {
+	position: relative;
+	padding-left: 5px;
+}
+
+.color-list li::before {
+	content: "●";
+	color: #00d567;
+	position: absolute;
+	left: -15px;
+}
+
+.botones {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-top: 1rem;
+}
+
+.boton-2,
+.boton-3 {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 12.5rem;
+	height: 3.2rem;
+	margin-top: 1rem;
+	background-color: var(--white-color);
+	border: 1px solid var(--black-color);
+	border-radius: 0.4rem;
+	transition: all	0.3s ease-in-out;
+}
+
+.boton-2:hover,
+.boton-3:hover {
+	cursor: pointer;
+	box-shadow: 4px 4px 0px 0px rgba(0,0,0,0.28);
+	transform: scale(1.1);
+	background-color: var(--btn-bg-color);
+	border: none;
+	color: var(--white-color);
+}
