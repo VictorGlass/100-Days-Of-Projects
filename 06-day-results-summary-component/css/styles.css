@@ -1,0 +1,269 @@
+/* -----------------
+Tabla de contenidos:
+--------------------
+1. Fuente ................ 11
+2. Variables ............. 17
+3. Estilos generales ..... 32
+-------------------- 
+*/
+
+
+:root {
+
+    /* ----- Fuente ----- */
+    --fuentePrincipal:  "Hanken Grotesk", sans-serif;
+    --fuenteWeights: 500, 700, 800;
+    --fuenteParrafos: 18px;
+
+    /* ----- Colores Primarios ----- */
+    --rojoClaro: #ff5757;
+    --naranjoAmarrillo: #ffb01f;
+    --verdeTeal: #00bd91;
+    --azulCobalto: #1125d4;
+
+    /* ----- Colores Gradiantes ----- */
+    /* ----- Azules -----------------*/
+    --azulClaroBackground: #7857ff;
+    --azulClaroRoyal: #2e2be9;
+
+    --azulVioleta: #4e21ca;
+    --azulPersian: #2421ca00;
+
+    /* ----- Colores Neutrales ------ */
+    --blanco: #ffffff;
+    --azulPale: #ebf1ff;
+    --lavandaClaro: #c8c7ff; 
+    --azulGrisOscuro: #303b5a;
+}
+
+/* ----- Estilos generales ----- */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: var(--fuentePrincipal);
+    width: 100vw;
+    overflow: hidden;
+}
+
+/* ----- Estilos Contenedor ----- */
+.container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* ----- Estilos Contenedor-result ----- */
+.result-container,
+.summary-container {
+    border-radius: 15px;
+    padding: 16px;
+}
+
+.result-container {
+    text-align: center;
+    background-image: linear-gradient(#7857ff, #2e2be9);
+    transition: all 0.5s;
+}
+.result-container:hover {
+    transform: scale(1.1);
+    border-radius: 30rem;
+    cursor: pointer;
+}
+
+.result-header,
+.result-message,
+.result-breakdown {
+    margin: 20px auto;
+    color: var(--lavandaClaro);
+}
+
+.result-header {
+    font-size: 1.25rem;
+    transition: all 0.3s ease;
+}
+.result-header:hover {
+    color: var(--blanco);
+    transform: scale(1.1);
+}
+
+.result-message {
+    font-size: 1.5rem;
+    font-weight: 700;
+    transition: all 0.3s ease;
+}
+.result-message:hover {
+    color: var(--blanco);
+}
+
+.result-breakdown {
+    width: 85%;
+}
+
+.score-container {
+    margin: auto;
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    background-image: linear-gradient(
+        #4e21ca,
+        #2421ca00);
+
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
+.score {
+    font-size: 4rem;
+    font-weight: 800;
+    color: var(--blanco);
+    margin: 0;
+    transition: all 0.3s ease-in-out;
+}
+.score:hover {
+    transform: scale(1.3) rotate(20deg);
+    cursor: pointer;
+}
+
+.ratio {
+    padding: 0;
+    color: var(--lavandaClaro);
+}
+
+.summary-container {
+    padding: 24px;
+    
+}
+
+.summary-header {
+    margin: 20px;
+    font-size: 1.25rem;
+}
+
+.bar {
+    border-radius: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding: 4px;
+    display: flex;
+    vertical-align: middle;
+}
+
+.description {
+    margin-left: 4px;
+    width: 75%;
+}
+
+.description img {
+    vertical-align: middle;
+}
+
+.final-score {
+    width: 25%;
+}
+
+.bar-1 {
+    background-color: #ff57571a;
+    transition: all 0.2s ease-in-out;
+}
+.bar-1:hover {
+    transform: scale(1.1);
+    border-radius: 3rem;
+    cursor: pointer;
+}
+.bar-1 .description {
+    color: var(--rojoClaro);
+}
+
+.bar-2 {
+    background-color: #ffb01f1a;
+    transition: all 0.2s ease-in-out;
+}
+.bar-2:hover {
+    transform: scale(1.1);
+    border-radius: 3rem;
+    cursor: pointer;
+}
+
+
+.bar-2 .description {
+    color: var(--naranjoAmarrillo);
+}
+
+.bar-3 {
+    background-color: #00bd911a;
+    transition: all 0.2s ease-in-out;
+}
+.bar-3:hover {
+    transform: scale(1.1);
+    border-radius: 3rem;
+    cursor: pointer;
+}
+
+.bar-3 .description {
+    color: #00bd91;
+}
+
+.bar-4 {
+    background-color: #1125d41a;
+    transition: all 0.2s ease-in-out;
+}
+.bar-4:hover {
+    transform: scale(1.1);
+    border-radius: 3rem;
+    cursor: pointer;
+}
+
+
+.bar-4 .description {
+    color: var(--azulCobalto);
+}
+
+/*Estilos Boton*/
+.continue {
+    font-size: 1rem;
+    display: block;
+    width: 100%;
+    margin: 20px auto;
+    text-align: center;
+    border: none;
+    border-radius: 50px;
+    padding: 20px 36px;
+    background-color: var(--azulGrisOscuro);
+    color: #ffffff;
+    transition: all 0.3s ease-in-out;
+}
+.continue:hover {
+    color: var(--blanco);
+    background-color: #1125d4;
+    transform: scale(1.1);
+    font-weight: bold;
+    cursor: pointer;
+}
+
+@media screen and (min-width: 600px) {
+    body {
+        display: grid;
+        place-items: center;
+        align-content: center;
+        height: 100vh;
+    }
+
+    .container {
+        flex-direction: row;
+        box-shadow: 10px 10px 20px hsl(241, 100%, 89%);
+        width: 50%;
+        margin: auto;
+        border-radius: 15px;
+    }
+
+    .result-container,
+    .summary-container {
+        width: 50%;
+    }
+}
+
+/* ----------------------------- */
+
+/* ----------------------------- */

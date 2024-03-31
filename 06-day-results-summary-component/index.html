@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Nombre del autor">
+    <meta name="description" content="Descripcion del proyecto">
+    <!-- Biblioteca de íconos Fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Biblioteca de Fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <!-- Archivo reset Normalize -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <!-- Archivo de estilos -->
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="./images/favicon-32x32.png" type="image/x-icon">
+    <title>Results Summary Component</title>
+</head>
+
+<body>
+    <!-- Contenedor Principal -->
+    <main class="container">
+
+        <!-- Contenedor Section -->
+        <section class="result-container">
+            <h2 class="result-header">Your Result</h2>
+
+            <div class="score-container">
+                <div class="score-display">
+                    <p class="score">76</p>
+                    <p class="ratio">of 100</p>
+                </div>
+            </div>
+
+            <p class="result-message">Great</p>
+            <p class="result-breakdown">You scored higher than 65% of the people who have taken these tests.</p>
+        </section>
+
+
+        <!-- Contenedor Secundario -->
+        <section class="summary-container">
+            <h2 class="summary-header">Summary</h2>
+            <div class="bar-graph" id="barGraph">
+
+                <!-- Article Primario -->
+                <article class="bar bar-1">
+                    <p class="description">
+                        <img src="images/icon-reaction.svg" alt="">
+                        Reaction
+                    </p>
+                    <p class="final-score">80 / 100</p>
+                </article>
+
+                <!-- Article Secundario -->
+                <article class="bar bar-2">
+                    <p class="description">
+                        <img src="images/icon-memory.svg" alt="">
+                        Memory
+                    </p>
+
+                    <p class="final-score">92 / 100</p>
+                </article>
+
+                <!-- Article Terciario -->
+                <article class="bar bar-3">
+                    <p class="description">
+                        <img src="images/icon-verbal.svg" alt="">
+                        Verbal
+                    </p>
+
+                    <p class="final-score">61 / 100</p>
+                </article>
+
+                <article class="bar bar-4">
+                    <p class="description">
+                        <img src="images/icon-visual.svg" alt="">
+                        Visual
+                    </p>
+
+                    <p class="final-score">72 / 100</p>
+                </article>
+            </div>
+
+            <!-- Contenedor Boton -->
+            <button class="continue">Continue</button>
+        </section>
+    </main>
+
+
+
+</body>
+
+</html>
