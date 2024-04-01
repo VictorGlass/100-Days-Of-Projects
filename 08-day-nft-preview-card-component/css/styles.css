@@ -1,0 +1,188 @@
+/* -----------------
+Tabla de contenidos:
+--------------------
+1. Fuente ................ 20
+2. Colores Primarios ..... 23
+3. Colores Neutrales ..... 27
+4. Estilos Globales  ..... 38
+5. Clases .... 53
+6. Imagen .... 73
+7. Titulos ... 79
+8. Parrafos .. 95
+9. Enlaces ... 109
+10. Linea .... 143
+11. Footer ... 153
+12. Avatar ... 159
+-------------------- 
+*/
+
+:root {
+    /* ----- Fuente ----- */
+    --fuentePrincipal: "Outfit", sans-serif;
+
+    /* ----- Colores Primarios----- */
+    --azulSuave: #8bacda;
+    --cyan: #00fff7;
+
+    /* ----- Colores Neutrales----- */
+
+    /* ----- Background Color ----- */
+    --azulOscuro: #0d192b;
+
+    /* ----- Background Card ----- */
+    --azulCard: #14253d;
+    --azulLine: #2f415b; 
+    --blanco: #ffffff;
+}
+
+/* ----- Estilos Globales ----- */
+html {
+    background-color: var(--azulOscuro);
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+/* ----- Estilizando Clases ----- */
+.contenedor__principal {
+    background-color: var(--azulCard);
+    display: flex;
+    flex-direction: column;
+    width: 320px;
+    height: 560px;
+    border-radius: 0.5rem;
+    padding: 20px;
+    margin: 7rem;
+    transition: all 0.5s ease-in-out;
+
+}
+.contenedor__principal:hover {
+    -webkit-box-shadow: 0px 3px 19px -3px rgba(106,136,168,1);
+    -moz-box-shadow: 0px 3px 19px -3px rgba(106,136,168,1);
+    box-shadow: 0px 3px 19px -3px rgba(106,136,168,1);
+    transform: rotate(-15deg) scale(1.1);
+}
+
+/* ----- Estilizando Imagen ----- */
+.c--img {
+    border-radius: 0.5rem;
+    margin-bottom: 10px;
+}
+
+/* ----- Estilizando Titulo ----- */
+.contenedor--titulo {
+    color: var(--blanco);
+    font-family: var(--fuentePrincipal);
+    font-weight: 600;
+    margin: 0.1rem;
+
+
+}
+h2 {
+    transition: all 0.4s ease-in-out;
+}
+h2:hover {
+    color: var(--cyan);
+    cursor: pointer;
+}
+/* ----- Estilizando Parrafo ----- */
+.contenedor--parrafo {
+    color: var(--azulSuave);
+    font-family: var(--fuentePrincipal);
+    font-weight: 400;
+    line-height: 1.6rem;
+    margin-bottom: 0;
+    transition: all 0.4s ease;
+}
+.contenedor--parrafo:hover {
+    color: var(--blanco);
+    cursor: pointer;
+}
+
+/* ----- Estilizando Enlace ----- */
+.contenedor__enlaces {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.enlace {
+    text-decoration: none;
+    color: var(--cyan);
+    font-family: var(--fuentePrincipal);
+    font-weight: 600;
+    text-align: right;
+    transition: all 0.5s ease;
+}
+.enlace:hover {
+    color: var(--blanco);
+}
+
+.span--1 {
+    color: var(--azulSuave);
+    font-family: var(--fuentePrincipal);
+    font-weight: 400;
+    color: var(--blanco);
+}
+/* ----- SVG ----- */
+.svg--eth {
+    padding-right: 0.1rem;
+    vertical-align: middle;
+}
+.svg--clock {
+    vertical-align: middle;
+}
+
+/* ----- Estilizando Linea ----- */
+hr {
+    margin-top: 0;
+    padding: 0;
+    color: #8bacda;
+    width: 19rem;
+    border: 0.1rem solid #8bacda;
+    border-radius: 1rem;
+}
+
+/* ----- Estilizando Footer ----- */
+.contenido__footer {
+    display: flex;
+    align-items: center;
+    margin: 0.5rem;
+}
+/* ----- IMG Avatar ----- */
+.img--avatar {
+    width: 15%;
+    transition: all 0.4s ease-in-out;
+}
+.img--avatar:hover {
+    transform: scale(1.3);
+    cursor: pointer;
+}
+.contenedor--avatar {
+    padding-left: 1rem;
+    
+    .enlace--avatar {
+        color: var(--azulSuave);
+        font-family: var(--fuentePrincipal);
+        font-weight: 300;
+    }
+    
+    a {
+        text-decoration: none;
+    }
+}
+.parrafo--avatar {
+    font-family: var(--fuentePrincipal);
+    color: var(--blanco);
+    padding-left: 0.2rem;
+    font-weight: 400;
+}
+
+/* ----------------------------- */
