@@ -1,0 +1,180 @@
+/* -----------------
+Tabla de contenidos:
+--------------------
+1. Fuente ................ 11
+2. Variables ............. 17
+3. Estilos generales ..... 32
+-------------------- 
+*/
+
+
+/* ----- Fuente ----- */
+
+
+
+
+
+
+/* ----------------------------- */
+/* ----- Estilos generales ----- */
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: hsl(0, 0%, 95%);
+	padding: 20px;
+	min-height: 100vh;
+}
+
+h2 {
+    transition: all 0.5s ease;
+}
+h2:hover {
+    rotate: 12deg;
+    cursor: pointer;
+}
+
+/* ----- Clases ----- */
+.cards-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.card {
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 40px;
+    min-width: 320px;
+    max-width: 350px;
+    min-height: 500px;
+
+}
+
+.sedan--card {
+    background-color: hsl(31, 77%, 52%);
+    border-radius: 10px 10px 0 0;
+}
+
+.suv--card {
+    background-color: hsl(184, 100%, 22%);
+}
+
+.luxury--card {
+    background-color: hsl(179, 100%, 13%);
+    border-radius: 0 0 10px 10px;
+}
+
+/* ----- Headings ----- */
+.card > h2 {
+    color: hsl(0, 0%, 95%);
+    font-family: "Big Shoulders Display",sans-serif;
+	font-weight: 700;
+	text-transform: uppercase;
+	font-size: 2.5em;
+}
+
+.card > p {
+	color: hsla(0, 0%, 100%, 0.75);
+	font-family: "Lexend Deca", sans-serif;
+	font-weight: 400;
+	line-height: 1.5;
+	font-size: 15px;
+}
+
+/* ----- Botones ----- */
+.card > a {
+	background-color: hsl(0, 0%, 95%);
+	text-decoration: none;
+	padding: 15px;
+	border-radius: 30px;
+	width: 150px;
+	text-align: center;
+	font-family: "Lexend Deca", sans-serif;
+	font-weight: 400;
+	margin-top: 70px;
+}
+
+a {
+    transition: all 0.5s ease;
+}
+a:hover {
+    animation: shake 0.4s ease;
+}
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateY(-10px); }
+    50% { transform: translateY(10px); }
+    75% { transform: translateY(-10px); }
+    100% { transform: translateX(0); }
+}
+
+.sedan--card {
+    transition: all 0.5s ease;
+}
+.sedan--card:hover {
+    transform: scale(1.1);
+    border-radius: 1rem;
+    
+
+}
+a:hover {
+    background-color: rgb(59, 57, 57);
+    color: white;
+}
+.suv--card {
+    transition: all 0.5s ease;
+}
+.suv--card:hover {
+    transform: scale(1.1);
+    border-radius: 1rem;
+}
+
+.luxury--card {
+    transition: all 0.5s ease;
+}
+.luxury--card:hover {
+    transform: scale(1.1);
+    border-radius: 1rem;
+}
+
+.sedans-card > a {
+	color: hsl(31, 77%, 52%);
+}
+.suv-card > a {
+	color: hsl(184, 100%, 22%);
+}
+.luxury-card > a {
+	color: hsl(179, 100%, 13%);
+}
+
+img {
+	width: 64px;
+	height: 40px;
+    transition: all 0.5s ease;
+}
+img:hover {
+    scale: 1.5;
+    cursor: pointer;
+}
+/*RESPONSIVE*/
+@media(min-width: 900px){
+	.cards-container {
+		flex-direction: row;
+	}
+	.luxury-card {
+		border-radius: 0 10px 10px 0;
+	}
+	.sedans-card {
+		border-radius: 10px 0 0 10px;
+	}
+}
+/* ----------------------------- */
