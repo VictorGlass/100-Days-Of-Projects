@@ -1,0 +1,193 @@
+/* -----------------
+Tabla de contenidos:
+--------------------
+1. Fuente ................ 11
+2. Variables ............. 17
+3. Estilos generales ..... 32
+-------------------- 
+*/
+
+:root {
+    --darkCyan: #19a2ae; 
+    --azulOscuroDesaturado: #2d3248;
+    --azulOscuroGris: #6a6f81;
+    --grisOscuro: #969696;
+}
+
+
+/* ----- Estilos generales ----- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Kumbh Sans", sans-serif;
+}
+
+body {
+    font-size: 18px;
+    height: 100vh;
+    width: 100%;
+    background-color: var(--darkCyan);
+    background-image: url(/images/bg-pattern-top.svg),
+                        url(/images/bg-pattern-bottom.svg);
+    background-repeat: none;
+    background-position: -50% -60vh , 150% 50vh;
+    background-size: 120vh;
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+}
+
+span, p {
+    color: var(--grisOscuro);
+    font-weight: 400;
+}
+
+h3, h4 {
+    color: var(--azulOscuroDesaturado);
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+/* ----- Clases ----- */
+.contenedor {
+    margin: auto;
+    text-align: center;
+}
+
+.bg-card {
+    max-width: 400px;
+}
+
+.bg-card img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.card {
+    border-radius: 15px;
+    background: white;
+    overflow: hidden;
+    transition: all 0.5s ease;
+}
+.card:hover {
+    box-shadow: 2px 2px 20px var(--azulOscuroGris);
+    animation: myAnim 1s ease 0s 1 normal forwards;
+}
+@keyframes myAnim {
+	0%,
+	100% {
+		transform: rotate(0deg);
+		transform-origin: 50% 50%;
+	}
+
+	10% {
+		transform: rotate(8deg);
+	}
+
+	20%,
+	40%,
+	60% {
+		transform: rotate(-10deg);
+	}
+
+	30%,
+	50%,
+	70% {
+		transform: rotate(10deg);
+	}
+
+	80% {
+		transform: rotate(-8deg);
+	}
+
+	90% {
+		transform: rotate(8deg);
+	}
+}
+
+.avatar {
+    max-width: 100px;
+    margin-top: -50px;
+    margin-inline: auto; /*-Para centrar horizontal-*/
+    margin-bottom: 1rem;
+}
+
+.avatar img {
+    border: 5px solid white;
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    
+}
+.avatar {
+    transition: all 0.5s ease-in-out;
+}
+
+.avatar:hover {
+    animation: shake 0.4s ease;
+    cursor: pointer;
+}
+@keyframes shake {
+    0% { transform: translateY(0); }
+    25% { transform: translateY(-10px); }
+    50% { transform: translateY(10px); }
+    75% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
+
+section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem 3rem;
+    padding: 1.5rem 3rem;
+    border-top: 2px solid #e6e6e6;
+    flex-wrap: wrap;
+}
+
+h4 {
+    display: flex;
+    flex-direction: column;
+}
+
+h3 {
+    margin-bottom: .5rem;
+    transition: 0.5s ease;
+}
+h3:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+h3 span {
+    padding-left: .2rem;
+}
+
+p {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+h4 span {
+    font-size: .8rem;
+}
+
+span {
+    transition: 0.5s ease;
+}
+span:hover {
+    cursor: pointer;
+    color: black;
+}
+
+/* ----- Fuente ----- */
+
+
+
+
+
+/* ----------------------------- */
+
+/* ----------------------------- */
