@@ -1,0 +1,378 @@
+/* -----------------
+Tabla de contenidos:
+--------------------
+1. Fuente ................ 11
+2. Variables ............. 17
+3. Estilos generales ..... 32
+-------------------- 
+*/
+
+:root {
+    /* ----- Colores Primarios ----- */
+    --veryDarkMagenta: #502050;
+    --softPink: #ee68a4;
+
+    /* ----- Colores Neutrales ----- */
+    --darkGreyMagenta: #937b92;
+    --lightGreyMagenta: #f7f2f7;
+    --white: #ffffff;
+
+    /* ----- Fuente ----- */
+    --fuentePrincipal: "League Spartan", sans-serif;
+    /* ----- 400, 500, 700 ----- */
+    /* ----- Font size 15px ----- */
+}
+
+/* ----- Estilos generales ----- */
+/* ----- Reglas de Box sizing ----- */
+/**************************/
+/* A (more) Modern CSS Reset*/
+/* https://piccalil.li/blog/a-more-modern-css-reset/ */
+/* by Andy Bell */
+/**************************/
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+    margin-block-end: 0;
+}
+
+/*Eliminar estilos de lista en elementos ul, ol con rol de lista, lo que sugiere que se eliminará el estilo por defecto*/
+ul[role="list"],
+ol[role="list"] {
+    list-style: none;
+}
+
+/* Establecer los valores predeterminados del cuerpo central */
+body {
+    min-height: 100vh;
+    line-height: 1.5;
+}
+
+/* Reduzca la altura de las líneas de los títulos y los elementos interactivos. */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+    line-height: 1.1;
+}
+
+/* Equilibrar el ajuste del texto en los títulos */
+h1,
+h2,
+h3,
+h4 {
+    text-wrap: balance;
+}
+
+/* Los elementos A que no tienen clase reciben estilos por defecto */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+    color: currentColor;
+}
+
+/* Facilitar el trabajo con imágenes */
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+/* Heredar fuentes para entradas y botones */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* Asegúrese de que las áreas de texto sin el atributo rows no sean minúsculas */
+textarea:not([rows]) {
+    min-height: 10em;
+}
+
+/* Cualquier cosa a la que se haya anclado debe tener un margen de desplazamiento adicional */
+:target {
+    scroll-margin-block: 5ex;
+}
+
+/**************************/
+
+/* Propiedades personalizadas (variables) para colores, pesos de fuente */
+:root {
+  /* Primary colors */
+    --clr-very-dark-magenta: hsl(300, 43%, 22%);
+    --clr-soft-pink: hsl(333, 80%, 67%);
+  /* Neutral colors */
+    --clr-dark-grayish-magenta: hsl(303, 10%, 53%);
+    --clr-light-grayish-magenta: hsl(300, 24%, 96%);
+    --clr-white: hsl(0, 0%, 100%);
+  /* Font-weights */
+    --fw-medium: 500;
+    --fw-bold: 700;
+}
+
+/* General section styling */
+body {
+    font-family: "League Spartan", sans-serif;
+    font-size: 0.9375rem; /* 15 pixels */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    padding: 1.5rem;
+    margin: 0;
+    background-image: url(./images/bg-pattern-top-mobile.svg),
+    url(./images/bg-pattern-bottom-mobile.svg);
+    background-repeat: no-repeat, no-repeat;
+    background-position: left top, right bottom;
+    background-color: var(--clr-white);
+}
+
+.section {
+    display: grid;
+    grid-auto-rows: minmax(100px, auto);
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+/* Intro Text */
+.text--title {
+    font-size: 2.5rem;
+    line-height: 0.8;
+    letter-spacing: -0.05em;
+    padding: 1.2rem 0.8rem;
+    color: var(--clr-very-dark-magenta);
+}
+
+.text--title-block {
+    display: block;
+}
+
+.text--description {
+    font-size: 1.1rem;
+    margin-block-start: 0;
+    color: var(--clr-very-dark-magenta);
+    transition: all 0.7s ease;
+}
+.text--description:hover {
+    font-weight: bold;
+}
+
+/* Ratings */
+.ratings-container {
+    display: grid;
+    grid-auto-rows: minmax(50px, auto);
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+.rating--box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0.7rem;
+    background-color: var(--clr-light-grayish-magenta);
+    border-radius: 9px;
+    transition: all 0.5s ease;
+}
+.rating--box:hover {
+    background-color: var(--veryDarkMagenta);
+    scale: 1.1;
+    cursor: pointer;
+    text-decoration-color: white;
+}
+
+.rating--star {
+    padding: 0.7rem;
+    width: 89px;
+    background-image: url(/images/icon-star.svg);
+    background-repeat: space no-repeat;
+    background-size: 15px;
+    background-position: center;
+}
+
+.rating--text {
+    font-weight: var(--fw-bold);
+    margin-block-start: 0;
+    color: var(--clr-very-dark-magenta);
+    transition: all 0.5s ease;
+}
+.rating--text:hover {
+    color: white;
+}
+
+
+/* Cards of buyers */
+.cards-container {
+    display: grid;
+    grid-auto-rows: minmax(50px, auto);
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+.card--box {
+    background-color: var(--clr-very-dark-magenta);
+    border-radius: 9px;
+    padding: 2.3rem;
+    transition: all 0.7s ease;
+}
+.card--box:hover {
+    transform: rotate(-5deg);
+    border-radius: 10rem;
+    cursor: pointer;
+}
+
+.card--buyer-box {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1.2rem;
+    font-weight: var(--fw-bold);
+}
+
+.card--buyer-img {
+    border-radius: 50%;
+    width: 40px;
+    transition: all 0.7s ease;
+}
+.card--buyer-img:hover {
+    transform: scale(1.2);
+}
+
+.card--buyer-name {
+    margin-block-start: 0;
+    color: var(--clr-light-grayish-magenta);
+    transition: all 0.7s ease;
+}
+.card--buyer-name:hover {
+    transform: scale(1.2);
+}
+
+.card--buyer-verified {
+    display: block;
+    color: var(--clr-soft-pink);
+}
+
+.card--testimonial {
+    font-size: 1rem;
+    color: var(--clr-light-grayish-magenta);
+    text-align: left;
+}
+
+/* Footer */
+.attribution {
+  font-size: 0.6875rem; /* 11px */
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+/**************************/
+/* MEDIA QUERIES */
+/* at min-width: 800px:
+section: 2-column grid
+ratings container: 5-column grid
+cards container: 5-row grid
+*/
+/**************************/
+@media (width >= 50rem) {
+body {
+    background-image: url(./images/bg-pattern-top-desktop.svg),
+    url(./images/bg-pattern-bottom-desktop.svg);
+}
+
+.section {
+    grid-template-columns: 1fr 1fr;
+    max-width: 70rem;
+    gap: 3rem;
+}
+
+.text-container {
+    text-align: left;
+}
+
+.text--title {
+    font-size: 3.5rem;
+    margin-block: 0 2rem;
+    padding: 0;
+}
+
+.text--description {
+    font-size: 1.2rem;
+    padding: 0 3.1rem 0 0;
+}
+
+.ratings-container {
+    grid-template-columns: 2rem 2rem 1fr 2rem 2rem;
+    padding: 2rem 0;
+}
+
+.rating--box {
+    flex-direction: row;
+    gap: 1.5rem;
+}
+
+.rating--text {
+    font-size: 1rem;
+}
+
+.rating--box-1 {
+    grid-column: 1/4;
+}
+
+.rating--box-2 {
+    grid-column: 2/5;
+}
+
+.rating--box-3 {
+    grid-column: 3/6;
+}
+
+.cards-container {
+    grid-column:1/-1;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 0.2rem 0.2rem 1fr 0.2rem 0.2rem;
+}
+
+.card--box-1 {
+    grid-row: 1/4;
+}
+
+.card--box-2 {
+    grid-row: 2/5;
+}
+
+.card--box-3 {
+    grid-row: 3/6;
+}
+}
