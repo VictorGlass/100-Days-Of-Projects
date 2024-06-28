@@ -1,0 +1,260 @@
+/* -----------------
+Tabla de contenidos:
+--------------------
+1. Fuente ................ 11
+2. Variables ............. 17
+3. Estilos generales ..... 32
+-------------------- 
+*/
+
+/* ----- Custom Properties ----- */
+:root {
+    /* ----- Colores Primarios ----- */
+    --red: #ea5353;
+    --cyan: #45d3d3;
+    --orange: #fcaf4a;
+    --blue: #549ef2;
+
+    /* ----- Colores Neutrales ----- */
+    --veryDarkBlue: #4c4e61;
+    --grayishBlue: #a3a5ae;
+    --veryLightGray: #fafafa;
+
+    /* ----- Fuente a Utilizar ----- */
+    --fuentePrincipal: "Poppins", sans-serif; 
+    /*Weights: 200, 400, 600*/
+}
+
+/* ----- Estilos generales ----- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*Cuerpo*/
+body {
+    font-family: var(--fuentePrincipal);
+    font-size: 15px;
+    color: var(--veryDarkBlue);
+    background-color: var(--veryLightGray);
+}
+
+/*Parrafo*/
+p {
+    color: var(--grayishBlue);
+    transition: all 0.5s ease;
+}
+p:hover {
+    color: black;
+    cursor: pointer;
+}
+
+/*Titulo*/
+h1 {
+    font-weight: 200;
+    font-size: 24px;
+    transition: all 0.5s ease;
+}
+h1:hover {
+    transform: scale(1.2);
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/*Clase Contenedor*/
+.contenedor {
+    padding: 50px 31.5px;
+}
+
+/*Clase Subtitulo*/
+.subtitulo {
+    font-weight: 600;
+    font-size: 24px;
+    margin-bottom: 8px;
+}
+
+/*Clase Contenedor-1*/
+.contenedor-1 {
+    margin-bottom: 3rem;
+}
+
+.contenedor-1 p {
+    line-height: 1.6;
+}
+
+/*Clase Contenedor-2*/
+.card-1 {
+    background-color: white;
+    border-radius: 1rem;
+    padding: 22.5px;
+    box-shadow: 1px 1px 15px 1px #a3a5ae80;
+}
+.card-1:hover {
+    animation: bounce 0.5s ease-in-out;
+}
+@keyframes bounce {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-15px); }
+    50% { transform: translateX(15px); }
+    75% { transform: translateX(-15px);}
+    100% { transform: translateX(0);}
+
+}
+.card-2 {
+    background-color: white;
+    border-radius: 1rem;
+    padding: 22.5px;
+    box-shadow: 1px 1px 15px 1px #a3a5ae80;
+    animation: jump 0.5s ease-in-out;
+}
+.card-2:hover {
+    animation: shake 0.5s ease-in-out;
+}
+@keyframes shake {
+    0% { transform: translateY(0); }
+    25% { transform: translateY(-15px); }
+    50% { transform: translateY(15px); }
+    75% { transform: translateY(-15px);}
+    100% { transform: translateY(0);}
+}
+
+.card-3 {
+    background-color: white;
+    border-radius: 1rem;
+    padding: 22.5px;
+    margin-top: 2rem;
+    box-shadow: 1px 1px 15px 1px #a3a5ae80;
+    animation: jump 0.5s ease-in-out;
+}
+.card-3:hover {
+    animation: shake 0.5s ease-in-out;
+}
+@keyframes shake {
+    0% { transform: translateY(0); }
+    25% { transform: translateY(-15px); }
+    50% { transform: translateY(15px); }
+    75% { transform: translateY(-15px);}
+    100% { transform: translateY(0);}
+}
+
+
+.card-4 {
+    background-color: white;
+    border-radius: 1rem;
+    padding: 22.5px;
+    box-shadow: 1px 1px 15px 1px #a3a5ae80;
+}
+.card-4:hover {
+    animation: bounce 0.5s ease-in-out;
+}
+@keyframes bounce {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-15px); }
+    50% { transform: translateX(15px); }
+    75% { transform: translateX(-15px);}
+    100% { transform: translateX(0);}
+}
+
+
+.contenedor-2 img {
+    position: relative;
+    left: 170px;
+    margin-top: 40px;
+    user-select: none;
+    pointer-events: none;
+}
+
+.wrapper  img {
+    position: relative;
+    left: 170px;
+    margin-top: 40px;
+    user-select: none;
+    pointer-events: none;
+}
+
+.contenedor-2 {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.contenedor-2 div h2 {
+    font-weight: 600;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.contenedor-2 div p {
+    line-height: 1.8;
+}
+
+/* ----- Bordes Cards ----- */
+.card-1 {
+    border-top: 4px solid var(--cyan);
+}
+.card-2 {
+    border-top: 4px solid var(--red);
+}
+.card-3 {
+    border-top: 4px solid var(--orange);
+}
+.card-4 {
+    border-top: 4px solid var(--blue)
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 1px;
+}
+
+.wrapper div {
+    background-color: white;
+    border-radius: 1rem;
+    padding: 22.5px;
+}
+
+
+/* ----- Responsive ----- */
+
+@media screen and (min-width: 768px) {
+    .contenedor {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .contenedor-1 {
+        text-align: center;
+        width: 510px;
+        margin-bottom: 70px;
+    }
+    .contenedor-2 {
+        display: flex;
+        flex-direction: row;
+        width: 1115px;
+        height: 530px;
+    }
+
+    .contenedor-2 > div {
+        width: 350px;
+        height: 250px;
+    }
+
+    .card-1,
+    .card-4 {
+        position: relative;
+        top: 145px;
+    }
+}
+@media screen and (min-width: 400px) {
+    .contenedor {
+        padding: 50px;
+    }
+}
+
+/* ----------------------------- */
+
+/* ----------------------------- */
